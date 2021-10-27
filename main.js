@@ -25,15 +25,30 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 
-const validateCred = (arr) => {
-    newArr = arr.reverse()
-    for (let i = 0; i < newArr.length; i++)
-
-
-
-
-    return true
-}
+const validateCred = (arr) =>{ 
+    newArr = []
+    let counter = 1;
+    let i = arr.length - 1;
+    while(i >= 0) {
+      if (counter % 2 != 0) {
+          console.log(arr[i] * 2)
+          newArr.push(arr[i] * 2)
+          counter++
+          i--
+      } else {
+          console.log(arr[i])
+          newArr.push(arr[i])
+          counter++
+          i--
+        }
+        
+    } 
+    newArr[0] /= 2
+    newArr.reverse()
+    console.log(newArr)
+    }
+    validateCred(valid1)
+    
 
 
 
